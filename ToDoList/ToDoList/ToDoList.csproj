@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{1B74BF3D-62D3-4B04-85B8-54558FDB0A54}</ProjectGuid>
+    <ProjectGuid>{B6BFD52F-0B35-404D-AE26-B6B2BF09C09E}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>PeopleList</RootNamespace>
-    <AssemblyName>PeopleList</AssemblyName>
+    <RootNamespace>ToDoList</RootNamespace>
+    <AssemblyName>ToDoList</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,9 +43,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="People.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Status.cs" />
+    <Compile Include="Task.cs" />
+    <Compile Include="TaskList.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

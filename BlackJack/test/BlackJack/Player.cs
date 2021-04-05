@@ -6,54 +6,34 @@ using System.Threading.Tasks;
 
 namespace test
 {
-   class Player
+    class Player
     {
-        public static int CardOne = new Random(Guid.NewGuid().GetHashCode()).Next(1, 11);
-        public static int CardTwo = new Random(Guid.NewGuid().GetHashCode()).Next(1, 11);
-        public static int Summ = CardOne + CardTwo;
-
-        public static void Cards()
+        private static int _cardOne = new Random(Guid.NewGuid().GetHashCode()).Next(1, 11);
+        private static int _cardTwo = new Random(Guid.NewGuid().GetHashCode()).Next(1, 11);
+        private static int _sum = _cardOne + _cardTwo;
+        public static int CardOne()
         {
-            CardOne = new Random(Guid.NewGuid().GetHashCode()).Next(1, 11);
-            CardTwo = new Random(Guid.NewGuid().GetHashCode()).Next(1, 11);
-            Summ = CardOne + CardTwo;
-            Console.WriteLine("У вас в руке:\n" + "1)" + (Cards)CardOne + "\n2)" + (Cards)CardTwo +"\nВ сумме: " + Summ);
-            string read = "";
-            int playerCardNext;
-            while (read != "нет")
-            {
-                
-                switch (read)
-                {
-                    case "да":
-                        {
-                            playerCardNext = new Random(Guid.NewGuid().GetHashCode()).Next(1, 11);
-                            Console.WriteLine("Вы взяли " + (Cards)playerCardNext);
-                            Summ += playerCardNext;
-                            Console.WriteLine("В сумме: " + Summ);
-                            Console.WriteLine("Хотите взять еще карту да/нет");
-                            read = Console.ReadLine().ToLower();
-                            break;
-                        }
-                    case "нет":
-                        {
-                            Console.WriteLine("У вас в сумме: " + Summ);
-                            break;
-                        }
-                    default:
-                        {
-                            Console.WriteLine("Хотите взять еще карту да/нет");
-                            read = Console.ReadLine().ToLower();
-                            break;
-                        }
-                        
-                }
-                if (Summ > 21)
-                {
-                    Console.WriteLine("У вас" + Summ + "\n Вы проиграли");
-                    break;
-                }
-            }
+            return _cardOne;
         }
+        public static int CardTwo()
+        {
+            return _cardTwo;
+        }
+        public static int Summ(int nextCard)
+        {
+            _sum += nextCard;
+            return _sum;
+        }
+        public static int Summ()
+        {
+            return _sum;
+        }
+        public static void NewRandom()
+        {
+            _cardOne = new Random(Guid.NewGuid().GetHashCode()).Next(1, 11);
+            _cardTwo = new Random(Guid.NewGuid().GetHashCode()).Next(1, 11);
+            _sum = _cardOne + _cardTwo;
+        }
+    
     }
 }

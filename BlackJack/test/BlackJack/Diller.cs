@@ -8,20 +8,32 @@ namespace test
 {
     class Diller
     {
-        static public int CardOne = new Random(Guid.NewGuid().GetHashCode()).Next(1, 11);
-        static public int CardTwo = new Random(Guid.NewGuid().GetHashCode()).Next(1, 11);
-        public static  int Summ = CardOne + CardTwo;
-        public  static void Cards()
+        private static int _cardOne = new Random(Guid.NewGuid().GetHashCode()).Next(1, 11);
+       private static int _cardTwo = new Random(Guid.NewGuid().GetHashCode()).Next(1, 11);
+        private static  int _summ = _cardOne + _cardTwo;
+        public static int CardOne()
         {
-            CardOne = new Random(Guid.NewGuid().GetHashCode()).Next(1, 11);
-            CardTwo = new Random(Guid.NewGuid().GetHashCode()).Next(1, 11);
-            Summ = CardOne + CardTwo;
-            while (Summ < 17)
-            {
-                int DillerCardNext = new Random(Guid.NewGuid().GetHashCode()).Next(1, 11);
-                Summ += DillerCardNext;
-                
-            }
-        }   
+            return _cardOne;
+        }
+        public static int CardTwo()
+        {
+            return CardTwo();
+        }
+        public static int Summ()
+        {
+            return _summ;
+        }
+        public static int Summ(int nextCard)
+        {
+            _summ = _cardOne + _cardTwo + nextCard;
+            return _summ;
+        }
+        public static void NewRandom()
+        {
+            _cardOne = new Random(Guid.NewGuid().GetHashCode()).Next(1, 11);
+            _cardTwo = new Random(Guid.NewGuid().GetHashCode()).Next(1, 11);
+            _summ = _cardOne + _cardTwo;
+        }
     }
+
 }

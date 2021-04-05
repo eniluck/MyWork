@@ -10,14 +10,17 @@ namespace test
     {
 
         static void Main(string[] args)
-        {
-            string read = "да";
-            while (read == "да")
+        {   
+            while(true)
             {
+                string read = "";
                 ItGame.Game();
-                Console.WriteLine("Играем дальше да/нет");
-                read = Console.ReadLine().ToLower();
+                Console.WriteLine("Играем дальше?");
+                read = Console.ReadLine();
+                if (read == "нет")
+                    break;
             }
+                
         }
     }
 }

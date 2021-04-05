@@ -15,3 +15,13 @@ C:\Users\User\OneDrive\Рабочий стол\C#\test\test\bin\Debug\test.pdb
 C:\Users\User\OneDrive\Рабочий стол\C#\test\test\bin\Debug\MedallionRandom.dll
 C:\Users\User\OneDrive\Рабочий стол\C#\test\test\bin\Debug\MedallionRandom.xml
 C:\Users\User\OneDrive\Рабочий стол\C#\test\test\obj\Debug\test.csproj.CopyComplete
+C:\Users\User\OneDrive\Рабочий стол\Git\MyWork\BlackJack\test\bin\Debug\test.exe.config
+C:\Users\User\OneDrive\Рабочий стол\Git\MyWork\BlackJack\test\bin\Debug\test.exe
+C:\Users\User\OneDrive\Рабочий стол\Git\MyWork\BlackJack\test\bin\Debug\test.pdb
+C:\Users\User\OneDrive\Рабочий стол\Git\MyWork\BlackJack\test\bin\Debug\MedallionRandom.dll
+C:\Users\User\OneDrive\Рабочий стол\Git\MyWork\BlackJack\test\bin\Debug\MedallionRandom.xml
+C:\Users\User\OneDrive\Рабочий стол\Git\MyWork\BlackJack\test\obj\Debug\test.csprojAssemblyReference.cache
+C:\Users\User\OneDrive\Рабочий стол\Git\MyWork\BlackJack\test\obj\Debug\test.csproj.CoreCompileInputs.cache
+C:\Users\User\OneDrive\Рабочий стол\Git\MyWork\BlackJack\test\obj\Debug\test.csproj.CopyComplete
+C:\Users\User\OneDrive\Рабочий стол\Git\MyWork\BlackJack\test\obj\Debug\test.exe
+C:\Users\User\OneDrive\Рабочий стол\Git\MyWork\BlackJack\test\obj\Debug\test.pdb
