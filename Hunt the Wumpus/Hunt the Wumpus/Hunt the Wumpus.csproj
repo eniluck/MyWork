@@ -45,6 +45,7 @@
   <ItemGroup>
     <Compile Include="GameObject\Bat.cs" />
     <Compile Include="GameObject\Game.cs" />
+    <Compile Include="GameObject\GetCoordinates.cs" />
     <Compile Include="GameObject\Map.cs" />
     <Compile Include="GameObject\Objects.cs" />
     <Compile Include="GameObject\Pit.cs" />

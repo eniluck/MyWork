@@ -6,40 +6,40 @@ using System.Threading.Tasks;
 
 namespace Hunt_the_Wumpus.GameObject
 {
-    class Map: Objects
+    class Map: Objects, GetCoordinates
     {
-        public  string end = "";
-        private int[,] _coordinates=new int[Size, Size];
-        public static int Size;
+        private string _map="";
+       private int _size;
         public Map(int size)
         {
-            Size = size;
+            _size = size;
         }
-        
-        public string Generait()
+        public int GetX()
         {
-            
-  
-            for (int x=0; x<Size;x++)
-            {
-                for (int y = 0; y < Size; y++)
-                {
-                    end += "[]";
-                }
-                end+="\n";
-            }
-            return end;
+            return X;
         }
-        
-        
+
+        public int GetY()
+        {
+            return Y;
+        }
+        public int GetSize()
+        {
+            return _size;
+        }
+       ]public string PrintMap()
+        {
+
+            for (int x = 0; x < _size; x++)
+            {
+                for (int y = 0; y < _size; y++)
+                {
+
+                    _map += "[ ]";
+                }
+                _map += "\n";
+            }
+            return _map;
+        }
     }
 }
-/*
-   Y
- 5  |[1,5][][][][]
- 4  |[1,4][][][][]
- 3  |[1,3][][][][]
- 2  |[1,2][][][][]
- 1  |___________X
-   0 1 2 3 4 5
- */
