@@ -109,37 +109,40 @@ namespace Hunt_the_Wumpus.GameObject
         {
             Console.WriteLine("В какую стопону стрелять");
             ConsoleKeyInfo input = Console.ReadKey(true);
-                int shootX = player.GetX();
-                int shootY = player.GetY();
-                switch (input.Key)
-                {
-                    case MoveDown:
-                        {
-                            shootX += 1;
-                            break;
-                        }
-                    case MoveUp:
-                        {
-                            shootX -= 1;
-                            break;
-                        }
-                    case MoveLeft:
-                        {
-                            shootY -= 1;
-                            break;
-                        }
-                    case MoveRight:
-                        {
-                            shootY += 1;
-                            break;
-                        }
-                }
-                if (IsHit(wumpus,shootX,shootY))
-                {
-                    wumpus.Died();
-                }
-                else
-                    Console.WriteLine("Вы промахнулись");
+            int shootX = player.GetX();
+            int shootY = player.GetY();
+            switch (input.Key)
+            {
+                case MoveDown:
+                    {
+                        shootX += 1;
+                        break;
+                    }
+                case MoveUp:
+                    {
+                        shootX -= 1;
+                        break;
+                    }
+                case MoveLeft:
+                    {
+                        shootY -= 1;
+                        break;
+                    }
+                case MoveRight:
+                    {
+                        shootY += 1;
+                        break;
+                    }
+            }
+            if (IsHit(wumpus, shootX, shootY))
+            {
+                wumpus.Died();
+            }
+            else
+            {
+                Console.Clear();
+                Console.WriteLine("Вы промахнулись");
+            }
         }
         private bool IsHit(Wumpus wumpus,int shootX,int shootY)
         {
