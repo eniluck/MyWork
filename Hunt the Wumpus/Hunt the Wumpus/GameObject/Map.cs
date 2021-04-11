@@ -27,7 +27,7 @@ namespace Hunt_the_Wumpus.GameObject
         {
             return _size;
         }
-       ]public string PrintMap()
+       public string PrintMap()
         {
 
             for (int x = 0; x < _size; x++)

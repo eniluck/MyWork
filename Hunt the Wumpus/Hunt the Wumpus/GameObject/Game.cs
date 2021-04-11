@@ -45,17 +45,34 @@ namespace Hunt_the_Wumpus.GameObject
             }
             return end;
         }
+        private string GeneraitForPlayer()
+        {
+
+            string end = "";
+            for (int x = 0; x < map.GetSize(); x++)
+            {
+                for (int y = 0; y < map.GetSize(); y++)
+                {
+                    if (player.CheckCoordinates(x, y))
+                        end += "[@]";
+                    else
+                        end += "[ ]";
+                }
+                end += "\n";
+            }
+            return end;
+        }
         public void Start()
         {
             GeneraitObject();
-            Console.WriteLine(map.PrintMap());
+            Console.WriteLine(GeneraitForPlayer());
             while (!player.IsDide(wumpus, pit, player) || !wumpus.GetLive())
             {
                 ConsoleKeyInfo UserInput = Console.ReadKey(true);
                 Console.Clear();
                 if (UserInput.Key == Fire)
                 {
-                    Console.WriteLine(map.PrintMap());
+                    Console.WriteLine(GeneraitForPlayer());
                     GeneraitObject();
                     KillWumpus(player, wumpus);
                 }
@@ -64,7 +81,7 @@ namespace Hunt_the_Wumpus.GameObject
                 if (player.CheckScope(map, player))
                 {
                     player.MoveBack(UserInput);
-                    Console.WriteLine(GeneraitObject());
+                    Console.WriteLine(GeneraitForPlayer());
 
                     Console.WriteLine("Нельзя выходить за границы");
                 }
@@ -72,13 +89,20 @@ namespace Hunt_the_Wumpus.GameObject
                 {
                     player.StepOnBat(player, batOne, batTwo);
                     GeneraitObject();
-                    Console.WriteLine(map.PrintMap());
+                    Console.WriteLine(GeneraitForPlayer());
                     player.Feeling(wumpus, pit, batOne, player);
                 }
                 if (player.IsDide(wumpus, pit, player))
+                {
+                    Console.WriteLine(GeneraitObject());
                     Console.WriteLine("RIP");
+                }
                 if (!wumpus.GetLive())
+                {
+                    Console.Clear();
+                  Console.WriteLine(GeneraitObject());
                     Console.WriteLine("Вы выйграли");
+                }
             }
         }
         public void KillWumpus(Player player, Wumpus wumpus)
