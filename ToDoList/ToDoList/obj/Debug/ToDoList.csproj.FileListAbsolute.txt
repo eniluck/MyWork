@@ -5,3 +5,10 @@ C:\Users\User\source\repos\ToDoList\ToDoList\obj\Debug\ToDoList.csprojAssemblyRe
 C:\Users\User\source\repos\ToDoList\ToDoList\obj\Debug\ToDoList.csproj.CoreCompileInputs.cache
 C:\Users\User\source\repos\ToDoList\ToDoList\obj\Debug\ToDoList.exe
 C:\Users\User\source\repos\ToDoList\ToDoList\obj\Debug\ToDoList.pdb
+C:\Users\User\OneDrive\Рабочий стол\C#\Git\MyWork\ToDoList\ToDoList\bin\Debug\ToDoList.exe.config
+C:\Users\User\OneDrive\Рабочий стол\C#\Git\MyWork\ToDoList\ToDoList\bin\Debug\ToDoList.exe
+C:\Users\User\OneDrive\Рабочий стол\C#\Git\MyWork\ToDoList\ToDoList\bin\Debug\ToDoList.pdb
+C:\Users\User\OneDrive\Рабочий стол\C#\Git\MyWork\ToDoList\ToDoList\obj\Debug\ToDoList.csprojAssemblyReference.cache
+C:\Users\User\OneDrive\Рабочий стол\C#\Git\MyWork\ToDoList\ToDoList\obj\Debug\ToDoList.csproj.CoreCompileInputs.cache
+C:\Users\User\OneDrive\Рабочий стол\C#\Git\MyWork\ToDoList\ToDoList\obj\Debug\ToDoList.exe
+C:\Users\User\OneDrive\Рабочий стол\C#\Git\MyWork\ToDoList\ToDoList\obj\Debug\ToDoList.pdb
