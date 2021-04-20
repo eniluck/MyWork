@@ -89,9 +89,9 @@ namespace Shop
                     case "1":
                         {
                             Console.WriteLine("Введите номер витрины");
-                            int Input = int.Parse(Console.ReadLine());
-                            Showcase showcase = showcases[Input-1];
-                            showcase.UsingShowcase(Input);
+                            int ShowcaseId = int.Parse(Console.ReadLine())-1;
+                            Showcase showcase = showcases[ShowcaseId];
+                            showcase.UsingShowcase(ShowcaseId);
                             break;
                         }
                     case "2":

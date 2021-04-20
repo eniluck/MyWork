@@ -16,24 +16,24 @@ namespace Shop
         public Showcase()
         {
             
-            Product[] products = new Product[Size];
+            products = new Product[100];
             CreateDate = DateTime.Now;
             DeleteDate = default;
         }
         public void Add(int showcaseId)
         {
-            
-            products[_count].ShopCaseId = showcaseId;
+            Product product = new Product();
+            product.ShopCaseId = showcaseId+1;
             Console.WriteLine("Введите название");
             string name = Console.ReadLine();
-            products[_count].Name = name;
-            products[_count].Id = _count + 1;
+            product.Name = name;
+            product.Id = _count + 1;
+            products[_count] = product;
             _count++;
         }
         public Product[] ShowCasesProduct(int showcaseId)
         {
-            //Console.WriteLine("Выберите номер витрины");
-            //int showcaseId = int.Parse(Console.ReadLine());
+           
             Product[] showCaseProduct = new Product[Size];
             for (int i = 0; i < _count; i++)
             {
@@ -47,7 +47,7 @@ namespace Shop
             Product[] products = ShowCasesProduct(showcaseId);
             for (int i = 0; i < products.Length; i++)
             {
-                if(products[i]!=null)
+                if(products[i]!=null )
                 Console.WriteLine(products[i]);
             }
         }
