@@ -22,7 +22,6 @@ namespace Hunt_the_Wumpus.GameObject
 
         private string GeneraitObject()
         {
-
             string end = "";
             for (int x = 0; x < map.GetSize(); x++)
             {
