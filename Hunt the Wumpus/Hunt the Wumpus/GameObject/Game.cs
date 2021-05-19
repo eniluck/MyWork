@@ -74,7 +74,7 @@ namespace Hunt_the_Wumpus.GameObject
                 {
                     Console.WriteLine(GeneraitForPlayer());
                     GeneraitObject();
-                    KillWumpus(player, wumpus);
+                    ShootInWumpus(player, wumpus);
                 }
                 else
                     player.Move(UserInput);
@@ -105,7 +105,7 @@ namespace Hunt_the_Wumpus.GameObject
                 }
             }
         }
-        public void KillWumpus(Player player, Wumpus wumpus)
+        public void ShootInWumpus(Player player, Wumpus wumpus)
         {
             Console.WriteLine("В какую стопону стрелять");
             ConsoleKeyInfo input = Console.ReadKey(true);
