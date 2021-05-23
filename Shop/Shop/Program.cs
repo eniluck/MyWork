@@ -1,13 +1,13 @@
 ﻿using System;
-
+using Shop.Model;
 namespace Shop
 {
     class Program
     {
         static void Main(string[] args)
         {
-            Shop shop = new Shop();
-            shop.Shoping();
+            Market market = new Market();
+            market.ShopUsing();
         }
     }
 }
