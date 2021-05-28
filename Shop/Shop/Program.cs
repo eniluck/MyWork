@@ -1,5 +1,6 @@
 ﻿using System;
 using Shop.Model;
+
 namespace Shop
 {
     class Program

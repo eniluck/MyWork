@@ -1,9 +1,6 @@
 ﻿using Shop.Interafaces;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Shop.Model
 {
@@ -18,7 +15,9 @@ namespace Shop.Model
         public DateTime DaliteTime { get ; set;}
         public List<Product> products { get; set; }
         public int ProductID { get; set; }
+
         public Showcase() {}
+
         public Showcase(string title,int id,int size)
         {
             ProductID = 1;
@@ -29,6 +28,7 @@ namespace Shop.Model
             Size = size;
             Title = title;
         }
+
         private int Validate(string input)
         {
             var num = 0;
@@ -40,6 +40,7 @@ namespace Shop.Model
             }
             return int.Parse(input);
         }
+
         public void CheckProductID(int id)
         {
             if (id > ProductID - 1)
@@ -50,6 +51,7 @@ namespace Shop.Model
                 CheckProductID(id);
             }
         }
+
         public void CheckId(int id)
         {
             if (id > _count-1)
@@ -60,7 +62,9 @@ namespace Shop.Model
                 CheckId(id);
             }
         }
+
         public List<Showcase> ReturnListShowcases() { return showcases; }
+
         public void Add()
         {
             string input;
@@ -74,6 +78,7 @@ namespace Shop.Model
             Showcase showcase = new Showcase(title,id,size);
             showcases.Add(showcase);
         }
+
         public void Print()
         {
             foreach(var x in showcases)
@@ -81,6 +86,7 @@ namespace Shop.Model
                 Console.WriteLine(x.ID+")"+"Title:"+x.Title+" Size:"+x.Size);
             }
         }
+
         public void Remove()
         {
             Console.Write("Введите ID витрины:");
@@ -107,6 +113,7 @@ namespace Shop.Model
                 }
             }
         }
+
         public void Edit()
         {
             Console.Write("Введите ID витрины:");
@@ -149,6 +156,7 @@ namespace Shop.Model
                     }
             }
         }
+
         public void Interect()
         {
             Console.WriteLine("Введите:\n1)Для добавления\n2)Для редактирования\n3)Для удаления\n0)Для отабражения витрин");
@@ -190,6 +198,7 @@ namespace Shop.Model
                     }
             }
         }
+
         public int SumProductCapacity()
         {
             var sum = 0;

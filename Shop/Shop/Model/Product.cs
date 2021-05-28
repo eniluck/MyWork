@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using Shop.Interafaces;
+
 namespace Shop.Model
 {
     class Product : IProduct
@@ -17,7 +17,9 @@ namespace Shop.Model
         public int Capacity { get; set; }
         public DateTime CreateTime { get; set; }
         public DateTime DaliteTime { get; set; }
+
         public Product() { }
+
         public Product(int id, string name, int capacity)
         {
             ID = id;
@@ -26,7 +28,9 @@ namespace Shop.Model
             CreateTime = DateTime.Now;
             DaliteTime = DateTime.MinValue;
         }
+
         public List<Product> ListProduct() { return products; }
+
         public void Print()
         {
             foreach (var x in products)
@@ -37,9 +41,10 @@ namespace Shop.Model
                 }
             }
         }
+
         public void CheckId(int id)
         {
-            if (id > _count-1)
+            if (id > _count - 1)
             {
                 Console.WriteLine("Такого ID не существует,введите другой ID");
                 var input = Console.ReadLine();
@@ -47,6 +52,7 @@ namespace Shop.Model
                 CheckId(id);
             }
         }
+
         private int Validate(string input)
         {
             var num = 0;
@@ -58,6 +64,7 @@ namespace Shop.Model
             }
             return int.Parse(input);
         }
+
         public void Create()
         {
             string input;
@@ -71,6 +78,7 @@ namespace Shop.Model
             Product product = new Product(id, name, capacity);
             products.Add(product);
         }
+
         public void Edit()
         {
             Console.Write("Введите ID товара:");
@@ -113,6 +121,7 @@ namespace Shop.Model
                     }
             }
         }
+
         public void Remove()
         {
             Console.Write("Введите ID продукта:");
@@ -130,47 +139,48 @@ namespace Shop.Model
                 }
             }
         }
+
         public void Interect()
         {
             Console.WriteLine("Введите:\n1)Для добавления\n2)Для редактирования\n3)Для удаления\n0)Для отабражения продуктов");
             var input = Console.ReadLine();
-                switch (input)
-                {
-                    case "1":
-                        {
-                            Console.Clear();
-                            Create();
-                            break;
-                        }
-                    case "2":
-                        {
-                            Console.Clear();
-                            Print();
-                            Edit();
-                            break;
-                        }
-                    case "3":
-                        {
-                            Console.Clear();
-                            Print();
-                            Remove();
-                            break;
-                        }
+            switch (input)
+            {
+                case "1":
+                    {
+                        Console.Clear();
+                        Create();
+                        break;
+                    }
+                case "2":
+                    {
+                        Console.Clear();
+                        Print();
+                        Edit();
+                        break;
+                    }
+                case "3":
+                    {
+                        Console.Clear();
+                        Print();
+                        Remove();
+                        break;
+                    }
                 case "0":
-                        {
+                    {
                         Print();
                         break;
-                        }
-                    default:
-                        {
-                            Console.Clear();
-                            Console.WriteLine("Такого действия не существует");
-                            Interect();
-                            break;
-                        }
-                }
-        }  
+                    }
+                default:
+                    {
+                        Console.Clear();
+                        Console.WriteLine("Такого действия не существует");
+                        Interect();
+                        break;
+                    }
+            }
+        }
     }
 }
 
-     
+
